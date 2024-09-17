@@ -1,0 +1,55 @@
+### <깃 지여 저장소 초기화>
+
+### 1. 깃 작업 디렉토리(Working Directory) 생성하기
+    # - 터미널 - 터미널 생성하기
+    ## pwd : 현재 작업중인 디렉토리 이름 출력
+    ## git init : 현재 폴더를 깃 저장소로 지정.
+    #   -> .git 이름의 숨김폴더가 생성된다.
+    #       : 깃 저장소 설정 정보가 저장되는 곳
+
+### 2. 깃 저장소에 사용자 정보 등록(config 파일에 저장)
+    ## git config user.name "깃허브 계정 이름"
+    ## git config user.name "jhg01271"
+
+    ## git config user.email "깃허브 계정 이메일"
+    ## git config user.email "jhg01271@gmail.com"
+
+    ## cat .git/config : config 파일 내용 확인
+
+### 3. '.gitgnore'파일 생성
+    # : 버전 관리가 필요없는 파일 정의
+    # : 빌드결과 파일, 로그 파일, 외부 파일 및 디렉토리 등은 우리가 직접 작성하거나 깃으로 관리할 필요가 없다.
+    #  -> 따라서 깃이 무시하도록 만들기 위한 설정 파일을 생성
+    ## 이렇게 적힌 파일 및 폴더는 변경이 생기더라도 깃 저장소의 하나의 변경 단위로 보지 않는다.
+
+#Logs
+Logs
+*.Logs
+
+#Dependency directoreies
+# Mac finder
+.DS_Store
+
+
+### 4. 깃 상태 확인하기
+    ## git status : 파일 상태 확인
+    # Untracked files : 관리하지 않는 파일 목록 확인
+
+    #   (use "git add <file>..." to include in what will be committed)
+    #    .gitgnore  
+    # -> 추가 후 커밋할 대상
+
+### 4-1. 깃의 작업트리(Working Tree) 
+# - 실제 작업 중인 파일들이 존재하느 작업 영역(Working Directory)에서
+#   새로운 파일을 생성하거나 기존 파일을 수정하면 관리하지 않는 파일(Untracked files)이 된다.
+# - Untracked files을 git add 명령어로 스테이징 영역(Staging Area)로 추가
+# - git commit 명령어를 통해 commit을 저장소에 생성
+#       commit : 깃 저장소의 하나의 변경 단위
+
+
+### 5. 수정사항을 깃의 Staging Area에 추가하기
+## git add . : 현재 폴더에서 발생한 모든 변경 파일을 스테이징 영역에 추가
+## git add "파일명"
+## git add "폴더명"
+
+## git status
