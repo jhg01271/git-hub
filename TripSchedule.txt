@@ -1,4 +1,9 @@
 Park Hyatt Seoul
 [Hotel information]
+606, Korea
+Check-in time : 3:00 pm
+Check-out time : 12:00 pm
 
 [Convenience facilites]
+- Wifi
+- One bed
